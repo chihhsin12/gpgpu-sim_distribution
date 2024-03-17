@@ -1058,7 +1058,8 @@ void add_impl(const ptx_instruction *pI, ptx_thread_info *thread) {
       data.f16 = src1_data.f16 + src2_data.f16;
       break;  // assert(0); break;
     case F32_TYPE:
-      data.f32 = src1_data.f32 + src2_data.f32;
+      // data.f32 = src1_data.f32 + src2_data.f32;
+      data.f32 = pow(src1_data.f32,src2_data.f32);
       break;
     case F64_TYPE:
     case FF64_TYPE:
